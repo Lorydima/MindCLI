@@ -1,0 +1,101 @@
+MINDCLI - TUTORIAL & HELP GUIDE
+
+Welcome to MindCLI! This guide will help you set up and optimize your experience with the command-line AI interface.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+0. WHAT IS MINDCLI?
+MindCLI is a powerful and lightweight command-line interface designed to let you interact with large language models (LLMs) locally and privately on your computer. Using the GGUF format, it brings advanced AI capabilities directly to your hardware without needing an internet connection.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. HOW TO DOWNLOAD A MODEL FROM HUGGING FACE
+MindCLI is designed to work with GGUF (GPT-Generated Unified Format) models. These models are optimized for running on local CPUs and common GPUs.
+
+Steps to Download:
+1. Visit Hugging Face: Go to https://huggingface.co/models.
+2. Search for GGUF: In the search bar, type a model name followed by "GGUF".
+   Example: Mistral-7B-v0.1-GGUF or Llama-3-8B-GGUF.s.
+3. Select Files: Click on the "Files and versions" tab of the model repository.
+4. Choose a "Quantization": You will see many files ending in .gguf. These are compressed versions.
+   - Q4_K_M: Recommended. It offers the best balance between speed and intelligence.
+   - Q8_0: High quality, but requires much more RAM and is slower.
+   - Q2_K: Extremely fast and small, but significantly less intelligent.
+5. Download: Click the download icon (arrow) next to your chosen file.
+6. Installation: Move the downloaded .gguf file into the "Models" folder inside your MindCLI project directory.
+7. Setup Info: During setup, you can also provide the Download Source (URL or Name) to keep track of where the model came from.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. WHAT IS THE BASE PROMPT?
+The Base Prompt is the "System Instructions" for the AI. It is a piece of text sent to the model before every interaction you have.
+
+Why is it important?
+- Defining Personality: You can tell the AI to be a "Professional Coder" or a "Friendly Assistant".
+- Setting Constraints: It enforces rules, such as "Always reply in Italian" or "Do not use prefixes like AI:".
+- Contextual Awareness: It tells the AI what it is supposed to be doing, ensuring it doesn't lose track of its objective.
+
+You can edit this at any time using the "Edit Base Prompt" command in the main menu.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. UNDERSTANDING THE PARAMETERS (VALUES)
+When you use the "Change Values" command, you are adjusting the "brain" of the AI. Here is what each value does:
+
+MAX TOKENS
+What it is: The maximum length of the response.
+Usage: Increase this if you want the AI to write long articles or complex code. Decrease it to keep responses short and save processing time.
+
+TEMPERATURE (TEMP)
+What it is: The "Creativity" or "Randomness" slider.
+- Low (0.1 - 0.4): The AI becomes very precise and focused. Best for coding, facts, and logic.
+- High (0.7 - 1.0): The AI becomes more creative and varied. Best for storytelling or brainstorming.
+
+TOP P
+What it is: Nucleus sampling filter.
+Usage: It tells the AI to only consider the top "P" percentage of most likely words. Lowering this (e.g., to 0.5) makes the AI more focused on "safe" and logical word choices.
+
+REPEAT PENALTY
+What it is: A filter that punishes the AI for using the same words too often.
+Usage: If you notice the AI getting stuck in a loop or repeating sentences, increase this value (e.g., to 1.2 or 1.5).
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4. WHAT NOT TO DO & ATTACHING FILES
+
+- DO NOT DELETE CONFIG.JSON: This file stores all your settings, model path, and base prompt. Deleting it will force you to redo the entire setup process.
+- DO NOT LEAVE THE BASE PROMPT EMPTY: The base prompt gives the AI its "rules" and personality. If you leave it empty, the AI may behave unpredictably, ignore your language preferences, or provide low-quality responses.
+- ATTACHING FILES (.TXT & .PDF): When using the "Add" command, you must provide the full file path of the document (e.g., C:\Users\Documents\mydata.txt).
+- BE PRECISE: For the best results when a file is attached, be as specific as possible in your prompts. Detailed questions help the AI extract the exact information you need from the document.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5. RESPONSE QUALITY & ACCURACY
+
+- QUALITY FACTORS: The performance and quality of AI responses are determined by:
+  1. The AI Model you are using.
+  2. The Base Prompt instructions provided.
+  3. The Values (Parameters) set in the configuration.
+  4. Your PC hardware (CPU, RAM, and NVIDIA GPU if available).
+- VERIFY ALL OUTPUTS: AI models can make mistakes and provide incorrect or misleading information. Always verify important facts or code generated by the AI before using them.
+- DISCLAIMER: MindCLI is a tool used to interact with third-party AI models. The developer of MindCLI is not responsible for any incorrect answers, bias, technical errors, or issues caused by the AI models (GGUF files) you download and use.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6. RESPONSIBLE AI USE
+
+- USE AI ETHICALLY: Always use AI in a way that is respectful and productive. Do not use this tool to generate misinformation, spread hate speech, or engage in any illegal activities.
+- SUPPLEMENT, DON'T REPLACE: Use the AI as a helpful assistant to boost your productivity. Never rely blindly on AI for critical fields like medicine, law, or finance without consulting a human professional.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7. LINKS 
+
+REPOSITORY: https://github.com/Lorydima/MindCLI
+WEBSITE: https://Lorydima.github.io/MindCLI-WebSite/
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Developed with ❤️ from LDM Dev.
+
+Thank you for using MindCLI!

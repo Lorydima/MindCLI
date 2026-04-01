@@ -1,0 +1,5 @@
+rich
+gpt4all
+pyfiglet
+pyperclip
+pypdf

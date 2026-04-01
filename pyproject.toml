@@ -1,0 +1,26 @@
+[project]
+name = "MindCLI"
+version = "1.0"
+description = "AI Engine on powerful and"
+authors = [{name = "LDM Dev"}]
+license = {text = "GPL-3.0"}
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "rich",
+    "gpt4all",
+    "pyfiglet",
+    "pyperclip",
+    "pypdf"
+]
+
+[project.urls]
+Website = "https://lorydima.github.io/MindCLI/"
+Repository = "https://github.com/Lorydima/MindCLI"
+
+[tool.setuptools]
+packages = ["src.mindcli"]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
