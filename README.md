@@ -73,7 +73,7 @@ You can access the MindCLI Website from this link: <a href="https://lorydima.git
 
 # 💾 Download MindCLI
 To download MindCLI v1.0 follow this link, the software is for **Windows OS, for linux use Wine:**
-<a href="https://github.com/Lorydima/MindCLI/releases/download/MindCLIv1.0/MindCLI_v1.0.zip" download>Download MindCLI v1.0</a>
+<a href="https://github.com/Lorydima/MindCLI/releases/download/MindCLI/MindCLI_V1.0.zip" download>Download MindCLI v1.0</a>
 
 **For macOS**  
 The EXE file is not available. However, the application can be run from source by executing the `main.py` file, provided that Python and the required dependencies are installed.
