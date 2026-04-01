@@ -20,10 +20,10 @@
 
 # 🎲 Features
 
-| Icon | Feature Description |
+| Img | Feature Description |
 |:---:|-------------------|
-| <img src="https://api.iconify.design/fa-solid:comments.svg?color=%23ffffff" width="40"> | **Powerful Chat Mode:** Easy and useful commands with text formatting that improve interaction with AI models. |
-| <img src="https://api.iconify.design/fa-solid:terminal.svg?color=%23ffffff" width="40"> | **Easy Commands:** Simple commands which allow for much simpler use and control of AI in a CLI. |
+| <img src="https://lorydima.github.io/MindCLI/MindCli_README_1.png" width="600"> | **Powerful Chat Mode:** Easy and useful commands with text formatting that improve interaction with AI models. |
+| <img src="https://github.com/Lorydima/MindCLI/blob/main/docs/MindCLI_README_2.png" width="600"> | **Easy Commands:** Simple commands which allow for much simpler use and control of AI in a CLI. |
 | <img src="https://api.iconify.design/fa-solid:file-code.svg?color=%23ffffff" width="40"> | **GGUF Compatibility:** Supports all AI models in .gguf format from Hugging Face. |
 | <img src="https://api.iconify.design/fa-solid:user-shield.svg?color=%23ffffff" width="40"> | **Privacy & Productivity:** Runs AI models offline, ensuring a privacy-first experience. |
 | <img src="https://api.iconify.design/fa-solid:sliders-h.svg?color=%23ffffff" width="40"> | **Complete Model Control:** Control over basic prompts, parameters, and hardware modes. |
