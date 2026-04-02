@@ -68,7 +68,7 @@ The `docs/` folder contains the source code for the project's website. It is **n
 
 
 # 🌐 MindCLI Website
-<img src="https://lorydima.github.io/MindCLI/MindCLI_README.png" alt="MindCLI_Website_Img" width="1200">
+<img src="https://github.com/user-attachments/assets/7fcce020-3219-4bc1-b37a-4c7c91815665" alt="MindCLI_Website_Img" width="1200">
 You can access the MindCLI Website from this link: <a href="https://lorydima.github.io/MindCLI/" target="_blank">MindCLI Website</a>
 
 # 💾 Download MindCLI
