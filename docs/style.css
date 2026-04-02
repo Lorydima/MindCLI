@@ -143,29 +143,89 @@ hr {
     margin-top: 40px;
     flex-wrap: wrap;
 }
-.btn.btn-light, .btn-light {
-    font-size: 2.5rem;
-    width: 425px;
-    margin: 0;
-    background-color: rgb(255, 252, 252);
-    color: rgb(0, 0, 0);
-    padding: 20px 40px;
-    border-radius: 10px;
-    text-align: center;
+
+
+.premium-download-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -50px;
-    margin-right: 60px;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
 }
-.btn.btn-light i, .btn-light i {
-    margin-right: 10px;
+
+.premium-download-btn .btn-icon {
+    font-size: 3.5rem;
+    margin-right: 25px;
+    display: flex;
+    align-items: center;
 }
-.download-info {
+
+.premium-download-btn .btn-text {
+    display: flex;
+    flex-direction: column;
     text-align: left;
-    font-size: 20px;
+    line-height: 1.1;
+}
+
+.premium-download-btn .main-text {
+    font-size: 2.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.premium-download-btn .sub-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    display: block;
+}
+
+.text-red {
+    color: #ff0000 !important;
+}
+
+.download-meta {
+    width: 100%;
+}
+
+.release-date {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px !important;
+    font-weight: bold !important;
+}
+
+.os-info p {
+    text-align: center;
+    font-size: 1.2rem !important;
+    margin: 10px 0 !important;
+    font-weight: bold !important;
     line-height: 1.4;
-    max-width: 350px;
+    display: block;
+}
+
+.os-info p i {
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+    width: 24px;
+    text-align: center;
+}
+
+.download-warnings-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.download-warnings-box p {
+    font-size: 1.1rem !important;
+    opacity: 0.8;
 }
 
 
@@ -790,12 +850,22 @@ footer a {
         text-align: center !important;
     }
 
-    .btn.btn-light {
+    .btn.btn-light, .premium-download-btn {
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 400px !important;
         margin-right: 0 !important;
         margin-top: 0 !important;
         margin-bottom: 20px !important;
+        padding: 15px 20px !important;
+    }
+
+    .premium-download-btn .btn-icon {
+        font-size: 2.5rem !important;
+        margin-right: 15px !important;
+    }
+
+    .premium-download-btn .main-text {
+        font-size: 1.8rem !important;
     }
 
     .custom-white-footer p,
@@ -847,4 +917,5 @@ footer a {
         font-size: 90px !important;
     }
 }
+
 

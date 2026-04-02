@@ -173,20 +173,61 @@
     </div>
 
 
-    <div class="card">
-        <h1 class="download-title">Download <span>MindCLI v1.0</span></h1>
-        <div class="download-section">
-            <a id="download-btn" href="https://github.com/Lorydima/MindCLI/releases/download/MindCLI/MindCLI_V1.0.zip" download class="btn btn-light download-btn">
-                <i class="fas fa-download"></i> Download Now
+    <div class="card download-card">
+        <div class="card-content d-flex flex-column align-items-center text-center w-100">
+            <h1 class="download-title">Download <span class="text-red">MindCLI</span></h1>
+            
+            <a id="download-btn" href="https://github.com/Lorydima/MindCLI/releases/download/MindCLI/MindCLI_V1.0.zip" download class="premium-download-btn">
+                <div class="btn-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <div class="btn-text">
+                    <span class="main-text">Download Now</span>
+                    <span class="sub-text">v1.0</span>
+                </div>
             </a>
-            <div class="download-info">
-                <p class="download-info-row">Download MindCLI v1.0 Release Date 01/04/2026</p>
-                <p class="download-info-row">The download is for <strong>Windows OS, for linux use Wine.</strong></p>
-                <p class="download-info-row">macOS users can run the application from source via GitHub.</p>
-                <p class="download-info-row">Inside the download folder, there is a <strong>MindCLI_HELP.txt</strong> file to help the user understand how to use the program.</p>
+
+            <div class="download-meta mt-4">
+                <p class="release-date">Release Date: 01/04/2026</p>
+                <div class="os-info mt-3">
+                    <p><i class="fab fa-windows"></i> Windows OS</p>
+                    <p><i class="fab fa-linux"></i> Linux (use Wine)</p>
+                    <p><i class="fab fa-apple"></i> macOS (Run from source via GitHub)</p>
+                </div>
+            </div>
+
+            <div class="download-warnings-box mt-4">
+                <p>Inside the download folder, check <strong>MindCLI_HELP.txt</strong> to understand how to use the program.</p>
             </div>
         </div>
     </div>
+
+    <script>
+        (function(){
+            const btn = document.getElementById('download-btn');
+            if (!btn) return;
+            const message = "Thanks for downloading MindCLI!\n\nImportant: Do not delete the .json, .ico, or .txt file types and the 'models' folder in the download folder. They are required for the program to function correctly.";
+
+            function notifyBrowser() {
+                if (!('Notification' in window)) return;
+                if (Notification.permission === 'granted') {
+                    new Notification('MindCLI — Download info', { body: message });
+                } else if (Notification.permission !== 'denied') {
+                    Notification.requestPermission().then(function(permission){
+                        if (permission === 'granted') new Notification('MindCLI — Download info', { body: message });
+                    });
+                }
+            }
+
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                notifyBrowser();
+                alert(message);
+                const href = this.href;
+                setTimeout(function(){ window.location.href = href; }, 150);
+            });
+        })();
+    </script>
 
 <div class="card">
         <h1 class="license-title">MindCLI<span> License</span></h1>
