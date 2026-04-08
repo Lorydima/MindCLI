@@ -1,7 +1,15 @@
 # MindCLI V1.0 Source Code Date: 00/00/0000 Dev: LDM Dev.
 
 '''
-MindCLI is a command-line interface tool designed to facilitate interaction with AI models.
+MindCLI is a command-line interface tool designed to facilitate interaction with AI offline models.
+
+Git Hub Repository Link: "https://github.com/Lorydima/MindCLI"
+
+PyCalc Pro Website link: "https://lorydima.github.io/MindCLI/"
+
+Before you use this code read the license in the LICENSE.txt or on Git Hub Repository.
+
+If you discover a security vulnerability please read the file SECURITY.md on the Git Hub Repository.
 '''
 
 # Suppress dependency warnings
