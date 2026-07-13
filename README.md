@@ -24,12 +24,12 @@
 
 | Images | Feature Description |
 |------------|-------------------|
-| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/file-code.svg" width="50"> | **Ollama Compatibility:** Supports all Ollama AI models. From the CLI you can download, remove and control AI parameters like temperature, top_p, etc and the base prompt |
-| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/user-shield.svg" width="50"> | **Privacy & Productivity:** Privacy-first app, all data remain on your PC and simultaneously improve your productivity |
-| ![MindCLI Chat Mode](docs/MindCli_README_1.png) | **Powerful Chat Mode:** MindCLI has a powerful chat mode with easy and useful commands and a text formatting that improve interaction with AI models and the advanced functions |
-| ![MindCLI Search](docs/MindCLI_README_2.png) | **Search Function:** MindCLI has the search functions with Tavily that allow to search the web and get information from it and use it with AI |
-| ![MindCLI Agent](docs/MindCLI_README_3.png) | **Agent Function:** MindCLI has the Agent function that allow to create/edit a local file on your PC and use it with AI |
-| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/sliders.svg" width="50"> | **Other Functions:** Attach files for AI context, save chat history, AI memory for persistent info, PowerShell command integration |
+| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/file-code.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Ollama Compatibility:** Supports all Ollama AI models. From the CLI you can download, remove and control AI parameters like temperature, top_p, etc and the base prompt |
+| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/user-shield.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Privacy & Productivity:** Privacy-first app, all data remain on your PC and simultaneously improve your productivity |
+| <div align="center">![MindCLI Chat Mode](docs/MindCli_README_1.png)</div> | **Powerful Chat Mode:** MindCLI has a powerful chat mode with easy and useful commands and a text formatting that improve interaction with AI models and the advanced functions |
+| <div align="center">![MindCLI Search](docs/MindCLI_README_2.png)</div> | **Search Function:** MindCLI has the search functions with Tavily that allow to search the web and get information from it and use it with AI |
+| <div align="center">![MindCLI Agent](docs/MindCLI_README_3.png)</div> | **Agent Function:** MindCLI has the Agent function that allow to create/edit a local file on your PC and use it with AI |
+| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/sliders.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Other Functions:** Attach files for AI context, save chat history, AI memory for persistent info, PowerShell command integration |
 
 # 📁Project Structure
 
@@ -82,8 +82,9 @@ The `MindCLI_UserGuide.pdf` file is a comprehensive user manual for the advanced
 
 # 💾Download MindCLI
 
-To donwload PyCalc Pro V.1.7 follow this link, the software is for **Windows OS and Linux**
-<a href="" download>Download MindCLI V2.0</a>
+To download MindCLI V2.0, follow the links below. The software is available for **Windows OS and Linux**:
+- [Download MindCLI V2.0 for Windows](https://github.com/Lorydima/MindCLI/releases/download/MIndCLI_V2.0/MindCLI_V2.0_Windows.zip)
+- [Download MindCLI V2.0 for Linux](https://github.com/Lorydima/MindCLI/releases/download/MIndCLI_V2.0/MIndCLI_V2.0_Linux.zip)
 
 **For macOS**  
 The `.app` file is not available.
