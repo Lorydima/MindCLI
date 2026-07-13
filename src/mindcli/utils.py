@@ -1,86 +1,114 @@
-import os
+# Utility functions for common operations across the application.
+
 import sys
+import os
+import contextlib
 import pyperclip
-import pypdf
-from datetime import datetime
+from mindcli.state import console
 
-def open_models_folder(base_path):
-    """Opens the local Models directory."""
-    curr = os.path.abspath(base_path)
-    project_root = None
-    for _ in range(6):
-        if os.path.isdir(os.path.join(curr, "Models")) or os.path.isdir(os.path.join(curr, "models")):
-            project_root = curr
-            break
-        parent = os.path.dirname(curr)
-        if parent == curr:
-            break
-        curr = parent
-    
-    if project_root is None:
-        project_root = os.path.abspath(os.path.join(base_path, ".."))
-    
-    models_path = os.path.join(project_root, "Models")
-    if not os.path.exists(models_path):
-        models_path = os.path.join(project_root, "models")
-        
-    try:
-        if os.path.exists(models_path):
-            os.startfile(models_path)
-            return True, f"Opening Models folder"
-        else:
-            return False, f"Models folder not found at: {models_path}"
-    except Exception as e:
-        return False, f"Error opening folder: {e}"
 
-def read_attached_file(file_path):
-    """Reads the content of .txt or .pdf files."""
-    try:
-        if file_path.lower().endswith(".pdf"):
-            reader = pypdf.PdfReader(file_path)
-            text_list = []
-            for page in reader.pages:
-                text_list.append(page.extract_text())
-            return "\n".join(text_list)
-        else:
-            with open(file_path, "r", encoding="utf-8") as f:
-                return f.read()
-    except Exception as e:
-        raise Exception(f"Error reading file: {e}")
+def get_base_path():
+    """Returns the base path for config and resources, adjusting for PyInstaller."""
+    if getattr(sys, 'frozen', False):
+        return os.path.dirname(sys.executable)
+    return os.path.dirname(os.path.abspath(__file__))
 
-def save_chat_to_desktop(chat_history, active_model):
-    """Saves the current chat history to a file on Desktop."""
-    if not chat_history:
-        return False, "No chat history to save."
 
-    title = input("Chat Title > ").strip()
-    if not title:
-        return False, "Title not valid."
-
-    safe = "".join(c for c in title if c.isalnum() or c in (' ', '-', '_')).rstrip()
-    if not safe:
-        safe = "chat"
-
-    desktop = os.path.join(os.path.expanduser("~"), "Desktop")
-    date_filename = datetime.now().strftime("%d-%m-%y")
-    filename = f"{safe}_{date_filename}.txt"
-    path = os.path.join(desktop, filename)
-
-    try:
-        with open(path, "w", encoding="utf-8") as f:
-            date_content = datetime.now().strftime("%d/%m/%y %H:%M:%S")
-            f.write(f"Date and time: {date_content} | Model: {active_model}\n\n")
-            for line in chat_history:
-                f.write(line + "\n")
-                f.write("\n")
-            return True, "Chat saved to your desktop"
-    except Exception as e:
-        return False, f"Error saving chat: {e}"
-
-def copy_to_clipboard(text):
-    """Copies text to the system clipboard."""
+def copy_to_clipboard(text: str) -> bool:
+    """Copies text using pyperclip and returns success status."""
     try:
         pyperclip.copy(text)
-        return True, "Response copied to clipboard"
-    except Exception as e:
-        return False, f"Error copying: {e}"
+        return True
+    except Exception:
+        pass
+    return False
+
+
+def prompt_masked_windows(prompt: str) -> str:
+    """Prompts for hidden input using Windows-style asterisks or Rich password field."""
+    try:
+        import msvcrt
+    except Exception:
+        return console.input(prompt, password=True).strip()
+
+    console.print(prompt, end="")
+    chars = []
+    while True:
+        ch = msvcrt.getwch()
+        if ch in ("\r", "\n"):
+            sys.stdout.write("\n")
+            sys.stdout.flush()
+            break
+        if ch == "\b":
+            if chars:
+                chars.pop()
+                sys.stdout.write("\b \b")
+                sys.stdout.flush()
+            continue
+        if ch in ("\x00", "\xe0"):
+            msvcrt.getwch()
+            continue
+        chars.append(ch)
+        sys.stdout.write("*")
+        sys.stdout.flush()
+    return "".join(chars).strip()
+
+
+def extract_domain(value: str) -> str:
+    """Extracts a domain from a URL-like value (e.g. https://example.com/path -> example.com)."""
+    if not value:
+        return ""
+    value = value.strip()
+    if not value.startswith(("http://", "https://")):
+        return ""
+    try:
+        from urllib.parse import urlparse as _urlparse
+        return _urlparse(value).netloc.lower()
+    except Exception:
+        return ""
+
+
+def sanitize_response(text: str) -> str:
+    """Sanitizes text output from the AI response by stripping whitespace."""
+    if not text:
+        return ""
+    return text.strip()
+
+
+@contextlib.contextmanager
+def suppress_stderr_fd():
+    """Temporarily suppresses stderr to hide verbose model output."""
+    try:
+        devnull = open(os.devnull, "w")
+        old_fd = os.dup(2)
+        os.dup2(devnull.fileno(), 2)
+        yield
+    finally:
+        try:
+            os.dup2(old_fd, 2)
+            os.close(old_fd)
+        except Exception:
+            pass
+        try:
+            devnull.close()
+        except Exception:
+            pass
+
+
+def detect_gpu_device() -> str:
+    """Detects if an NVIDIA GPU is available via nvidia-smi and returns 'gpu' or 'cpu'."""
+    try:
+        if sys.platform == "win32":
+            result = os.system("nvidia-smi > NUL 2>&1")
+        else:
+            result = os.system("nvidia-smi > /dev/null 2>&1")
+        if result == 0:
+            return "gpu"
+    except Exception:
+        pass
+    return "cpu"
+
+
+def open_path_with_default_app(path: str):
+    """Opens a file or folder with the platform default application."""
+    os.startfile(path)

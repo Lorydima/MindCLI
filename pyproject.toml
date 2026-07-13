@@ -1,17 +1,20 @@
 [project]
 name = "MindCLI"
-version = "1.0"
-description = "AI Engine on powerful and"
+version = "2.0"
+description = "MindCLI is a command-line interface tool for interacting with AI models via Ollama"
 authors = [{name = "LDM Dev"}]
 license = {text = "GPL-3.0"}
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 dependencies = [
     "rich",
-    "gpt4all",
+    "ollama",
     "pyfiglet",
     "pyperclip",
-    "pypdf"
+    "pypdf",
+    "tavily-python",
+    "python-docx",
+    "openpyxl"
 ]
 
 [project.urls]

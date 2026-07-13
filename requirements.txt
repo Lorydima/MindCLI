@@ -1,5 +1,8 @@
 rich
-gpt4all
+ollama
 pyfiglet
 pyperclip
 pypdf
+tavily-python
+python-docx
+openpyxl

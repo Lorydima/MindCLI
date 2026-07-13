@@ -1,13 +1,15 @@
-# MindCLI V1.0
+# MindCLI V2.0
+
 <div align="center">
-  <img src="https://lorydima.github.io/MindCLI/MindCLI_README.png" alt="MindCLI_V1.0_README_Img" width="800">
+  <img src="/docs/MindCLI_README.png" alt="MindCLI_Readme" width="400" height="900">
 </div>
 
-# ℹ️ Repository Info 
+# ℹ️Repository Info
+
 ![GitHub stars](https://img.shields.io/github/stars/Lorydima/MindCLI?color=gold)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Lorydima/MindCLI?color=red)
 ![Platform: Windows](https://img.shields.io/badge/platform-windows-blue)
-![Platform: Linux via Wine](https://img.shields.io/badge/linux%20via%20wine-red?)
+![Platform: Linux](https://img.shields.io/badge/platform-linux-orange)
 ![macOS Support](https://img.shields.io/badge/macos%20via%20main.py-lightblue?)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Lorydima/MindCLI?color=lightblue)
@@ -20,71 +22,79 @@
 
 # 🎲 Features
 
-| Img | Feature Description |
-|:---:|-------------------|
-| <img src="https://lorydima.github.io/MindCLI/MindCli_README_1.png" width="600"> | **Powerful Chat Mode:** Easy and useful commands with text formatting that improve interaction with AI models. |
-| <img src="https://github.com/Lorydima/MindCLI/blob/main/docs/MindCLI_README_2.png" width="600"> | **Easy Commands:** Simple commands which allow for much simpler use and control of AI in a CLI. |
-| <img src="https://api.iconify.design/fa-solid:file-code.svg?color=%23ffffff" width="40"> | **GGUF Compatibility:** Supports all AI models in .gguf format from Hugging Face. |
-| <img src="https://api.iconify.design/fa-solid:user-shield.svg?color=%23ffffff" width="40"> | **Privacy & Productivity:** Runs AI models offline, ensuring a privacy-first experience. |
-| <img src="https://api.iconify.design/fa-solid:sliders-h.svg?color=%23ffffff" width="40"> | **Complete Model Control:** Control over basic prompts, parameters, and hardware modes. |
-| <img src="https://api.iconify.design/fa-solid:balance-scale.svg?color=%23ffffff" width="40"> | **Ethical AI Usage:** The developer encourages everyone to use AI models responsibly and ethically. |
+| Images | Feature Description |
+|------------|-------------------|
+| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/file-code.svg" width="50"> | **Ollama Compatibility:** Supports all Ollama AI models. From the CLI you can download, remove and control AI parameters like temperature, top_p, etc and the base prompt |
+| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/user-shield.svg" width="50"> | **Privacy & Productivity:** Privacy-first app, all data remain on your PC and simultaneously improve your productivity |
+| ![MindCLI Chat Mode](docs/MindCli_README_1.png) | **Powerful Chat Mode:** MindCLI has a powerful chat mode with easy and useful commands and a text formatting that improve interaction with AI models and the advanced functions |
+| ![MindCLI Search](docs/MindCLI_README_2.png) | **Search Function:** MindCLI has the search functions with Tavily that allow to search the web and get information from it and use it with AI |
+| ![MindCLI Agent](docs/MindCLI_README_3.png) | **Agent Function:** MindCLI has the Agent function that allow to create/edit a local file on your PC and use it with AI |
+| <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/sliders.svg" width="50"> | **Other Functions:** Attach files for AI context, save chat history, AI memory for persistent info, PowerShell command integration |
 
-# 📁 Project Structure
+# 📁Project Structure
 
 ```
 MindCLI/
 ├── src/                               # Application source code
+│   │
 │   └── mindcli/                       # Main application package
+│       ├── state.py                   # Global state, defaults, and console
+│       ├── utils.py                   # Utility functions (clipboard, I/O, etc.)
+│       ├── config_manager.py          # Configuration load/save
+│       ├── ollama_utils.py            # Ollama process and AI generation
+│       ├── file_handler.py            # File reading for attachments
+│       ├── web_search.py              # Tavily search integration
+│       ├── memory_manager.py          # Memory CRUD operations
+│       ├── model_manager.py           # Model download, delete, list, switch
+│       ├── chat_manager.py            # Chat loop, save, manage chat files
+│       ├── ui.py                      # Terminal UI and command interface
 │       ├── main.py                    # Application entry point
-│       ├── config.py                  # Configuration management
-│       ├── ai_engine.py               # AI model interaction
-│       ├── ui.py                      # Terminal UI components
-│       ├── utils.py                   # Helper functions
-│       │
-│       └── assets/                    # Application assets
-│           ├── MindCLI.ico            # Application icon
-│           ├── MindCLI.png            # Application logo
-│           └── MindCLI_HELP.txt       # Help documentation
+│       ├── assets/                    # Application assets (icons, etc.)
+│       ├── chats/                     # Saved chat sessions
+│       ├── cmd/                       # Windows command wrapper
+│       ├── configs/                   # Configuration JSON files
+│       └── models/                    # Per-model configuration files
 │
-├── docs/                              # Website Source Code
-│   ├── index.html                     # Website main page
-│   ├── style.css                      # Website styling
-│   └── ...                            # Website assets (images, ico)
+├── docs/                              # Website source code
+│   ├── index.html
+│   ├── style.css
+│   └── images/                        # Website images
 │
-├── LICENSE.txt                        # GNU GPL v3 License
-├── README.md                          # Project overview 
+├── MindCLI_UserGuide.pdf              # User guide
+├── LICENSE.txt                        # GPL-3.0 License
+├── README.md                          # Project overview
 ├── CHANGELOG.md                       # Version history
 ├── CONTRIBUTING.md                    # Contribution guidelines
 ├── pyproject.toml                     # Project metadata and build config
 ├── SECURITY.md                        # Security Policy
-└── requirements.txt                   # External dependencies
+├── requirements.txt                   # Python dependencies
+└── .gitattributes                     # Git repository settings
 ```
 
-**About assets:**  
-Assets (icons and help files) are stored inside the package so the application can find them when run from source or packaged.
+**About configs/assets:**  
+Configuration files and assets are stored inside the application directory so they can be found when running from source or packaged as an EXE.
 
 **About the docs/ folder:**  
-The `docs/` folder contains the source code for the project's website. It is **not required to run the application** locally.
+The `docs/` folder contains files used for the source code of the website. It is **not required to run the application** locally.
 
+**About the user guide:**  
+The `MindCLI_UserGuide.pdf` file is a comprehensive user manual for the advanced functions and suggestions about the program.
 
-# 🌐 MindCLI Website
-<img src="https://github.com/user-attachments/assets/7fcce020-3219-4bc1-b37a-4c7c91815665" alt="MindCLI_Website_Img" width="1200">
-You can access the MindCLI Website from this link: <a href="https://lorydima.github.io/MindCLI/" target="_blank">MindCLI Website</a>
+# 💾Download MindCLI
 
-# 💾 Download MindCLI
-To download MindCLI v1.0 follow this link, the software is for **Windows OS, for linux use Wine:**
-<a href="https://github.com/Lorydima/MindCLI/releases/download/MindCLI/MindCLI_V1.0.zip" download>Download MindCLI v1.0</a>
+To donwload PyCalc Pro V.1.7 follow this link, the software is for **Windows OS and Linux**
+<a href="" download>Download MindCLI V2.0</a>
 
 **For macOS**  
-The EXE file is not available. However, the application can be run from source by executing the `main.py` file, provided that Python and the required dependencies are installed.
+The `.app` file is not available.
 
-> [!WARNING]
-> **For proper program execution, please read the notes below**
-> 
-> **Do not delete the `.json`, `.txt` files or the `Models` folder** in the program directory; they are required for the program to function correctly.
+However, the application can be run from source by executing the `main.py` file,
+provided that Python and the required dependencies are installed.
 
-# 🔗 Clone Repository
+# 🔗Clone Repository
+
 Follow these steps:
+
 ```bash
 git clone https://github.com/Lorydima/MindCLI.git
 ```
@@ -94,13 +104,19 @@ pip install -r requirements.txt
 ```
 
 ```bash
-run main.py
+run src/main.py
 ```
 
-# 🛠️ Bug reports and issues
+All external libraries are listed in `requirements.txt`.
+
+# 🛠️Bug reports and issue
+
 I do my best to keep this project stable and reliable, but bugs can still happen.
 If you spot any issues or errors, feel free to open a GitHub issue.
 Your feedback really helps me improve the project.
 
-# 📄 License
-Before you use the software please read the GNU GPL v3 license at this link: [License](https://github.com/Lorydima/MindCLI?tab=License-1-ov-file)
+Thanks for contributing and helping make this project better from *LDM Dev*❤️
+
+# 📄License
+
+Before you use the software please read the **GPL-3.0 License** license at this link: <a href="https://github.com/Lorydima/MindCLI?tab=License-1-ov-file#">License</a>

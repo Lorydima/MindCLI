@@ -45,7 +45,7 @@ hr {
 }
 
 .hero-text p {
-    color:white;
+    color: white;
     text-align: left;
     padding-left: 50px;
     font-size: 30px;
@@ -82,7 +82,7 @@ hr {
 
 .card-title1 h1 {
     margin-left: 500px;
-} 
+}
 
 .card-title3 {
     margin-right: 225px;
@@ -118,7 +118,6 @@ hr {
     text-align: left;
     margin: 10px 0 0 0;
     font-size: 1.7rem;
-    line-height: 1.4;
     max-width: 600px;
     margin-right: 10px;
 }
@@ -126,6 +125,7 @@ hr {
 .card-text3 h1 {
     padding-right: 220px;
 }
+
 .card-text3 ul {
     padding-left: 25px;
     font-size: 1.5rem;
@@ -240,19 +240,23 @@ hr {
     color: white;
     margin-top: 10px;
 }
+
 .license-list {
     margin-left: 10px;
     font-size: 18px;
     color: white;
 }
+
 .license-update,
 .license-thanks {
     margin-left: 10px;
     font-size: 18px;
 }
+
 .license-update {
     margin-top: 20px;
 }
+
 .license-thanks {
     margin-top: 10px;
 }
@@ -274,11 +278,13 @@ footer {
     align-items: center;
     margin: 0 !important;
 }
+
 footer .d-flex.align-items-center img {
     width: 150px;
     height: 150px;
     margin-right: 20px;
 }
+
 footer .d-flex.align-items-center p,
 footer .d-flex p,
 footer .d-flex.align-items-center a {
@@ -286,9 +292,11 @@ footer .d-flex.align-items-center a {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 footer .d-flex p {
     margin-right: 20px;
 }
+
 footer .d-flex.align-items-center a {
     margin-right: 50px;
     margin-top: -5px;
@@ -301,12 +309,14 @@ footer .d-flex.align-items-center a {
     margin: 0 !important;
     padding: 20px 0;
 }
+
 .Website-info p {
     font-size: 14px;
     margin: 0 !important;
     color: #ffffff;
     padding: 5px 20px;
 }
+
 .Website-info a {
     color: #ffffff;
     text-decoration: underline;
@@ -428,7 +438,7 @@ footer .d-flex.align-items-center a {
     object-fit: contain;
     border-radius: 15px;
     display: block;
-    background: transparent; 
+    background: transparent;
 }
 
 
@@ -495,7 +505,9 @@ footer a {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.footer-left, .footer-center, .footer-right {
+.footer-left,
+.footer-center,
+.footer-right {
     flex: 1;
     display: flex;
     align-items: center;
@@ -514,9 +526,9 @@ footer a {
 }
 
 .custom-white-footer .footer-logo {
-    width: 110px !important; 
+    width: 110px !important;
     height: auto !important;
-    margin-right: 15px !important; 
+    margin-right: 15px !important;
     margin-bottom: 0 !important;
 }
 
@@ -539,7 +551,7 @@ footer a {
     background-color: red !important;
     color: #ffffff !important;
     text-align: left !important;
-    padding: 20px 20px !important; 
+    padding: 20px 20px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -549,7 +561,8 @@ footer a {
     color: #ffffff !important;
 }
 
-.website-info-text a, .website-info-link {
+.website-info-text a,
+.website-info-link {
     color: #ffffff !important;
     text-decoration: underline !important;
 }
@@ -559,6 +572,7 @@ footer a {
     margin-bottom: 5px !important;
     color: #ffffff !important;
 }
+
 .download-info {
     margin-left: 80px;
 }
@@ -574,7 +588,9 @@ footer a {
     border-color: #000000 !important;
     color: #ffffff !important;
 }
-.github-black-btn:hover, .github-black-btn:focus {
+
+.github-black-btn:hover,
+.github-black-btn:focus {
     background-color: #333333 !important;
     border-color: #333333 !important;
     color: #ffffff !important;
@@ -694,7 +710,7 @@ footer a {
 
 
 @media (max-width: 1024px) {
-    
+
     .hero-text {
         text-align: center;
         padding: 40px 20px;
@@ -727,7 +743,7 @@ footer a {
         height: 150px
     }
 
-    
+
     .card {
         max-width: 95% !important;
         padding: 30px 20px !important;
@@ -741,8 +757,11 @@ footer a {
         gap: 20px !important;
     }
 
-    
-    .card-image, .card-image2, .card-image3, .card-content img {
+
+    .card-image,
+    .card-image2,
+    .card-image3,
+    .card-content img {
         width: 100% !important;
         max-width: 500px !important;
         height: auto !important;
@@ -751,34 +770,49 @@ footer a {
         transform: none !important;
     }
 
-    
-    .card-text0, .card-text2, .card-text3, .card-text-center, .feature-text-container {
+
+    .card-text0,
+    .card-text2,
+    .card-text3,
+    .card-text-center,
+    .feature-text-container {
         margin: 0 !important;
         padding: 0 !important;
         text-align: center !important;
         width: 100% !important;
     }
 
-    .card-text0 p, .card-text2 p, .card-text3 p, .feature-card-text p {
+    .card-text0 p,
+    .card-text2 p,
+    .card-text3 p,
+    .feature-card-text p {
         margin: 20px 0 0 0 !important;
         font-size: 1.3rem !important;
         line-height: 1.5 !important;
         text-align: center !important;
     }
 
-    .card-title, .card-title1, .card-title2, .card-title3, .feature-card-title {
+    .card-title,
+    .card-title1,
+    .card-title2,
+    .card-title3,
+    .feature-card-title {
         margin: 0 !important;
         padding: 0 !important;
         text-align: center !important;
         width: 100% !important;
     }
 
-    .card-title h1, .card-title1 h1, .card-title2 h1, .card-title3 h1, .feature-card-title h1 {
+    .card-title h1,
+    .card-title1 h1,
+    .card-title2 h1,
+    .card-title3 h1,
+    .feature-card-title h1 {
         margin: 10px 0 !important;
         font-size: 2rem !important;
     }
 
-    
+
     .feature-icon-new {
         font-size: 120px !important;
         margin: 0 auto 10px auto !important;
@@ -791,7 +825,7 @@ footer a {
         width: 100% !important;
     }
 
-    
+
     .download-section {
         flex-direction: column !important;
         align-items: center !important;
@@ -809,7 +843,9 @@ footer a {
         padding: 40px 20px !important;
     }
 
-    .footer-left, .footer-center, .footer-right {
+    .footer-left,
+    .footer-center,
+    .footer-right {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
@@ -820,17 +856,18 @@ footer a {
 
     .custom-white-footer .footer-logo {
         width: 120px !important;
-        margin-right: 0 !important; 
-        margin-bottom: 10px !important; 
+        margin-right: 0 !important;
+        margin-bottom: 10px !important;
     }
 
     .download-info {
-        margin: 0 !important; 
+        margin: 0 !important;
         width: 100% !important;
         text-align: center !important;
     }
 
-    .btn.btn-light, .premium-download-btn {
+    .btn.btn-light,
+    .premium-download-btn {
         width: 100% !important;
         max-width: 400px !important;
         margin-right: 0 !important;
@@ -868,17 +905,17 @@ footer a {
     .hero-text h1 {
         font-size: 2.2rem !important;
     }
-    
+
     .hero-text p {
         font-size: 1.1rem !important;
     }
 
-    
+
     .navbar-toggler {
         background-color: white !important;
         border: none !important;
     }
-    
+
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
     }
@@ -897,5 +934,3 @@ footer a {
         font-size: 90px !important;
     }
 }
-
-
