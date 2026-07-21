@@ -1,7 +1,7 @@
 # MindCLI V2.0
 
 <div align="center">
-  <img src="/docs/MindCLI_README.png" alt="MindCLI_Readme" width="400" height="900">
+  <img src="/docs/MindCLI_README.png" alt="MindCLI_Readme" width="700" height="900">
 </div>
 
 # ℹ️Repository Info
@@ -24,12 +24,12 @@
 
 | Images | Feature Description |
 |------------|-------------------|
-| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/file-code.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Ollama Compatibility:** Supports all Ollama AI models. From the CLI you can download, remove and control AI parameters like temperature, top_p, etc and the base prompt |
-| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/user-shield.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Privacy & Productivity:** Privacy-first app, all data remain on your PC and simultaneously improve your productivity |
+| <div align="center"><img src="https://api.iconify.design/fa6-solid/file-code.svg?color=%23ffffff" width="38"></div> | **Ollama Compatibility:** Supports all Ollama AI models. From the CLI you can download, remove and control AI parameters like temperature, top_p, etc and the base prompt |
+| <div align="center"><img src="https://api.iconify.design/fa6-solid/user-shield.svg?color=%23ffffff" width="38"></div> | **Privacy & Productivity:** Privacy-first app, all data remain on your PC and simultaneously improve your productivity |
 | <div align="center">![MindCLI Chat Mode](docs/MindCli_README_1.png)</div> | **Powerful Chat Mode:** MindCLI has a powerful chat mode with easy and useful commands and a text formatting that improve interaction with AI models and the advanced functions |
 | <div align="center">![MindCLI Search](docs/MindCLI_README_2.png)</div> | **Search Function:** MindCLI has the search functions with Tavily that allow to search the web and get information from it and use it with AI |
 | <div align="center">![MindCLI Agent](docs/MindCLI_README_3.png)</div> | **Agent Function:** MindCLI has the Agent function that allow to create/edit a local file on your PC and use it with AI |
-| <div align="center"><img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/sliders.svg" width="50" style="filter: brightness(0) invert(1);"></div> | **Other Functions:** Attach files for AI context, save chat history, AI memory for persistent info, PowerShell command integration |
+| <div align="center"><img src="https://api.iconify.design/fa6-solid/sliders.svg?color=%23ffffff" width="38"></div> | **Other Functions:** Attach files for AI context, save chat history, AI memory for persistent info, PowerShell command integration |
 
 # 📁Project Structure
 
@@ -79,6 +79,11 @@ The `docs/` folder contains files used for the source code of the website. It is
 
 **About the user guide:**  
 The `MindCLI_UserGuide.pdf` file is a comprehensive user manual for the advanced functions and suggestions about the program.
+
+# 🌐 MindCLI Website
+<img width="1871" height="847" src="https://github.com/user-attachments/assets/b3c29b97-7ca7-4205-b416-b59466e8396d"/>
+You can access the MindCLI Website from this link: <a href="https://lorydima.github.io/MindCLI" target="_blank">MindCLI Website</a>
+
 
 # 💾Download MindCLI
 
